@@ -1,0 +1,19 @@
+@import '~bootstrap/scss/bootstrap';
+
+.ad-container {
+    display: grid;
+    justify-content: center;
+
+    .ad-exemple {
+        width: 315px;
+        height: 80px;
+        background-color: #E5E5E5;
+    }
+
+    @include media-breakpoint-up(md) {
+        .ad-exemple {
+            width: 750px;
+            height: 80px;
+        }
+    }
+}
