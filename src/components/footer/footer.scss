@@ -1,0 +1,299 @@
+@import '~bootstrap/scss/bootstrap';
+
+.footer {
+    background-color: #556F4D;
+    position: relative;
+    width: 100%;
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        row-gap: 40px;
+        margin: 0;
+        padding: 52px 20px 35px 20px;
+
+        .newsletter {
+            p {
+                text-align: center;
+                font-style: normal;
+                font-weight: 700;
+                font-size: 22px;
+                line-height: 27px;
+                color: #fff;
+    
+            }
+            .inputEmail {
+                background-color: #fff;
+                border-radius: 30px;
+                height: 60px;
+                display: flex;
+                align-items: center;
+                max-width: 335px;
+                width: 100%;
+                margin: 0 auto;
+    
+    
+                input,
+                input:hover,
+                input:focus,
+                input:focus-visible {
+                    border: none;
+                    background-color: transparent;
+                    outline: none;
+                    margin-left: 15px;
+                    height: 60px;
+                    width: calc(100% - #{120px});
+                }
+                input::placeholder {
+                    font-size: 14px;
+                    font-weight: 700;
+                    color: #556F4D;
+                }
+                button {
+                    background: #F6C63B;
+                    border-radius: 30px;
+                    height: 40px;
+                    border: none;
+                    font-size: 16px;
+                    font-weight: 700;
+                    color: #fff;
+                    margin-right: 10px;
+                    width: 120px;
+                }
+            }
+        }
+    
+        .socialLinks {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 30px;
+            margin: 20px auto 0 auto;
+            justify-content: space-around;
+            width: 100%;
+            max-width: 300px;
+    
+            .socialIcon {
+                position: relative;
+                background-color: #506849;
+                border-radius: 50%;
+                display: grid;
+                justify-content: center;
+                align-content: center;
+                height: 25vw;
+                max-height: 80px;
+    
+                img {
+                    width: 8.5vw;
+                    max-width: 28px;
+                }
+    
+            }
+        }
+    
+        p {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 15px;
+            text-align: center;
+            color: #FFFFFF;
+        }
+    
+        .clickwebIcon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+    }
+
+    
+    .backToTop {
+        background-color: #506849;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: 90px;
+        font-size: 30px;
+        width: 100%;
+    }
+
+    @include media-breakpoint-up(md) {
+        .content {
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 90px 20px 70px 20px;
+
+            .footerContent {
+                display: flex;
+                flex-direction: column;
+                gap: 70px;
+
+                .logo {
+                    width: 100%;
+                    max-width: 490px;
+                }
+
+                .footerMenu {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+
+                    .footerLinks {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 15px;
+
+                        .link {
+                            font-style: normal;
+                            font-weight: 700;
+                            font-size: 18px;
+                            line-height: 22px;
+                            color: #FFFFFF;
+                            background-color: transparent;
+                            border: none;
+                            cursor: pointer;
+                            text-align: left;
+                            text-decoration: none;
+                        }
+                    }
+
+                    .help {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 15px;
+
+                        .title {
+                            text-align: left;
+                            margin: 0;
+                            font-style: normal;
+                            font-weight: 700;
+                            font-size: 18px;
+                            line-height: 22px;
+                            color: #F6C63B;
+                        }
+
+                        .text {
+                            display: flex;
+                            flex-direction: column;
+                
+                            .form-select {
+                                background-color: transparent;
+                                color: #fff;
+                                border: none;
+                                -webkit-appearance: none;
+                                -moz-appearance: none;
+                                background-image: $form-select-indicator;
+                                background-repeat: no-repeat;
+                                background-position: right center;
+
+                                &:focus {
+                                    background-color: #556F4D;
+                                    border: none;
+                                    outline: 0;
+                                    box-shadow: none;
+                                }
+                            }
+
+                            .input-group-append {
+                                position: absolute;
+                                right: 2.5rem;
+                                top: 6px;
+                                z-index: 6;
+                            }
+
+                            p {
+                                margin: 0;
+                                text-align: left;
+                                font-style: normal;
+                                font-weight: 700;
+                                font-size: 14px;
+                                line-height: 17px;
+                                color: #FFFFFF;
+
+                                img {
+                                    cursor: pointer;
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
+
+            .socialLinks {
+                grid-template-columns: repeat(3, 80px);
+                gap: 40px;
+                height: 80px;
+                margin-top: 100px;
+                padding: 0;
+
+                .socialIcon {
+                    height: 100%;
+                    
+                    img {
+                        width: 26px;
+                    }
+                }
+
+            }
+        }
+
+        .politicaLinks {
+            display: flex;
+            gap: 20px;
+            padding: 0 0 40px 20px;
+            flex-direction: row;
+
+            .separador {
+                background-color: #fff;
+                width: 2px;
+                height: 2px;
+                border-radius: 1px;
+                margin: auto 0;
+            }
+            
+            .link {
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 17px;
+                color: #FFFFFF;
+                background-color: transparent;
+                border: none;
+                cursor: pointer;
+                text-align: left;
+                text-decoration: none;
+            }
+        }
+
+        .backToTop {
+            padding: 36px 20px;
+            justify-content: space-between;
+
+            p {
+                font-style: normal;
+                font-weight: 700;
+                font-size: 12px;
+                line-height: 15px;
+                color: #FFFFFF;
+                margin: 0;
+            }
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        .content {
+            padding: 90px 80px 70px 80px;
+        }
+
+        .politicaLinks {
+            padding: 0 0 40px 80px;
+        }
+
+        .backToTop {
+            padding: 36px 80px;
+        }
+    }
+}

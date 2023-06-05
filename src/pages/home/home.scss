@@ -1,0 +1,86 @@
+@import '~bootstrap/scss/bootstrap';
+
+.main {
+    margin-top: 70px;
+
+    .petsNamorando {
+        display: flex;
+        justify-content: center;
+
+
+        p {
+            font-size: 24px;
+            font-weight: 900;
+            margin-bottom: 0;
+        }
+        .pets {
+            color: #F6C63B;
+        }
+
+        .namorando {
+            color: #506849;
+        }
+    }
+
+    .subtitle {
+        margin: 20px;
+        color: #707070;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 20px;
+        letter-spacing: 0em;
+        text-align: center;
+
+    }
+
+    .petsList {
+        display: grid;
+        justify-content: center;
+        gap: 50px;
+        margin-bottom: 144px;
+
+        .petsListBtn {
+            width: 100%;
+            max-width: 380px;
+            height: 60px;
+            margin: 0 auto;
+            border-radius: 30px;
+            border: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 22px;
+            letter-spacing: 0em;
+            text-align: center;
+            color: #546E4D;
+            background-color: #F6C63B;
+        }
+    }
+
+    @include media-breakpoint-down(md) {
+        margin-top: 35px;
+
+        .petsList {
+            display: grid;
+            justify-content: center;
+            gap: 50px;
+            margin-bottom: 80px;
+    
+            .petsListBtn {
+                width: 100%;
+                max-width: 335px;
+            }
+        }
+    }
+
+    @media (max-width: 375px) {
+        .petsList {
+            .petsListBtn {
+                width: auto;
+                margin: 0 20px;
+            }
+        }
+    }
+}

@@ -1,0 +1,75 @@
+@import '~bootstrap/scss/bootstrap';
+// desk 6 e mobile 2
+.couplesContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 20px;
+    row-gap: 50px;
+    max-width: 1180px;
+    margin: 0 auto;
+    animation-duration: 3s;
+    animation-delay: 0s;
+    animation-name: slide-in-animation;
+
+    @keyframes slide-in-animation {
+        0% {
+            -webkit-transform: translateX(-2000px);
+            transform: translateX(-2000px);
+        }
+        100% {
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
+        }
+    }
+
+    .couplesContent {
+        width: 100%;
+        max-width: 380px;
+        margin: 0 auto;
+    
+        .couples {
+            position: relative;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+    
+            img {
+                width: 100%;
+            }
+    
+            .love {
+                position: absolute;
+                width: 60px;
+                left: 50%;
+                margin-left: -30px;
+            }
+        }
+    
+        .names {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 22px;
+            letter-spacing: 0em;
+            text-align: center;
+            color: #546E4D;
+    
+        }
+        
+        
+    }
+    @include media-breakpoint-down(md) {
+        grid-template-columns: 1fr;
+        
+        .couplesContent {
+            display: none;
+    
+            &:nth-child(n+5) {
+                display: block;
+            }
+        }
+    }
+}
+
